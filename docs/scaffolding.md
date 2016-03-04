@@ -1,18 +1,19 @@
 ---
 layout: page
-title: Scaffolding
+title: 脚手架
 ---
 
-Scaffolding refers to the global resets and dependencies that Primer is built upon.
+脚手架是指Primer建立的全局重置和依赖。
 
-## Contents
+## 目录
 
 * Will be replaced with the ToC, excluding the "Contents" header
 {:toc}
 
-## HTML5 doctype
+## HTML5文档类型
 
-Primer makes use of certain HTML elements and CSS properties that **require** the use of the HTML5 doctype. Include it at the beginning of all your pages.
+Primer使用确定的HTML元素和CSS属性，**要求**使用HTML5文档类型。
+在你所有页面的开头包含它们。
 
 {% highlight html %}
 <!DOCTYPE html>
@@ -21,10 +22,11 @@ Primer makes use of certain HTML elements and CSS properties that **require** th
 </html>
 {% endhighlight %}
 
-## Box-sizing
+## 盒大小(Box-sizing)
 
-We reset `box-sizing` to `border-box` for every element in Primer. This allows us to more easily assign widths to elements that also have `padding` and `border`s.
+我们在Primer里重置了所有元素的`box-sizing`为`border-box`。这允许我们更加简单的给那些拥有`padding`和`border`
+属性的元素分配宽度。
 
-## Built on Normalize
+## 建立在Normalize之上
 
-For improved cross-browser rendering, we use [Normalize.css](http://necolas.github.io/normalize.css/) to correct small inconsistencies across browsers and devices.
+为了改进跨浏览器渲染，我们使用 [Normalize.css](http://necolas.github.io/normalize.css/) 来更正跨浏览器和设备的一些小差异。
