@@ -16,3 +16,7 @@ sass:
 
 github:
   repo: https://github.com/primer-cn/primer-cn
+
+origin:
+  github: https://github.com/primer/primer
+  site: http://www.primercss.io
