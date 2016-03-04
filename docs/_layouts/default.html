@@ -29,10 +29,10 @@
         </a>
 
         <nav class="masthead-nav">
-          <a {% if page.layout == "page" %}class="active"{% endif %} href="{{ site.baseurl }}/scaffolding">Docs</a>
-          <a {% if page.title == "About" %}class="active"{% endif %} href="{{ site.baseurl }}/about">About</a>
+          <a {% if page.layout == "page" %}class="active"{% endif %} href="{{ site.baseurl }}/scaffolding">文档</a>
+          <a {% if page.title == "About" %}class="active"{% endif %} href="{{ site.baseurl }}/about">关于</a>
           <a href="{{ site.github.repo }}" target="_blank">GitHub</a>
-          <a href="{{ site.github.repo }}/blob/master/README.md#install" target="_blank">Install</a>
+          <a href="{{ site.github.repo }}/blob/master/README.md#install" target="_blank">安装</a>
         </nav>
       </div>
     </header>
@@ -41,10 +41,10 @@
       <div class="jumbotron">
         <div class="container">
           <h1>Primer</h1>
-          <p>The CSS toolkit and guidelines that power GitHub.</p>
+          <p>使GitHub充满能量的CSS工具包及其指南。</p>
 
           <a href="{{ site.baseurl }}/scaffolding/" class="btn btn-reverse">
-            Read the docs
+            阅读文档
           </a>
         </div>
       </div>
@@ -52,16 +52,16 @@
       <div class="container about-that">
         <div class="columns">
           <div class="one-third column">
-            <h2>Made at GitHub</h2>
-            <p>Primer is the basecoat of GitHub, made by nerds just like you who share a passion for HTML and CSS.</p>
+            <h2>在GitHub上制作</h2>
+            <p>Primer是GitHub的底层，由向你一样的那些对HTML和CSS充满分享激情的网虫制作。</p>
           </div>
           <div class="one-third column">
-            <h2>Open source</h2>
-            <p>Available for use under the MIT license and built with open source projects like SCSS, Jekyll, Grunt, and more.</p>
+            <h2>在GitHub上制作</h2>
+            <p>在MIT协议下有效使用，以开放源代码工程构建，就像SCSS,Jekyll,Grunt等工程一样。</p>
           </div>
           <div class="one-third column">
-            <h2>Build tools</h2>
-            <p>Includes a small Gruntfile for compiling our SCSS, Autoprefixer for vendor prefixes, and Parker for CSS stats.</p>
+            <h2>构建工具</h2>
+            <p>包含一个小的构建文件来编译我们的SCSS，自动添加前缀，和放置CSS位置。</p>
           </div>
         </div>
       </div>
@@ -71,8 +71,8 @@
       {{ content }}
 
       <footer class="footer">
-        Copyright GitHub {{ site.time | date: '%Y' }}.<br>
-        Created and maintained by the CSS team at GitHub. <strong>Currently v{{ site.version }}.</strong>
+        版权 GitHub {{ site.time | date: '%Y' }}.<br>
+        由GitHub上的CSS团队开发和维护。 <strong>当前版本 v{{ site.version }}.</strong>
       </footer>
     </div>
 
