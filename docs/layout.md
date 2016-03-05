@@ -1,20 +1,21 @@
 ---
 layout: page
-title: Layout
+title: 布局
 ---
 
-Primer's layout includes basic page containers and a single-tiered, fraction-based grid system. That sounds more complicated than it really is though—it's just containers, rows, and columns.
+Primer的布局包括基本页面容器和一个单一管理区，基于分数的网格系统。那听起来远比它实际的要复杂——
+只不过是容器，行，和列。
 
-You can find all the below styles in `_layout.scss`.
+你可以在`_layout.scss`中找到以下所有样式。
 
-## Contents
+## 目录
 
 * Will be replaced with the ToC, excluding the "Contents" header
 {:toc}
 
-## Container
+## 容器
 
-Center your page's contents with a `.container`.
+使用`.container`让你的页面内容居中。
 
 {% highlight html %}
 <div class="container">
@@ -22,22 +23,23 @@ Center your page's contents with a `.container`.
 </div>
 {% endhighlight %}
 
-The container applies `width: 980px;` and uses horizontal `margin`s to center it.
+容器通过`width: 980px;`和使用水平的`margin`来使内容居中。
 
-## Grid
+## 网格
 
-### How it works
+### 原理
 
-The grid is pretty standard—you create rows with `.columns` and individual columns with a column class and fraction class. Here's how it works:
+当在行中使用`.columns`并在具体每一列中使用column类和分数类就会生成一个标准好看的网格。
+这里是它的工作原理：
 
-- Add a `.container` to encapsulate everything and provide ample horizontal gutter space.
-- Create your outer row to clear the floated columns with `<div class="columns">`.
-- Add your columns with individual `<div class="column">`s.
-- Add your fractional width classes to set the width of the columns (e.g., `.one-fourth`).
+- 增加一个`.container`来封装所有事情并提供足够的水平空间。
+- 使用`<div class="columns">`来创建行，并清除列之间的漂浮。
+- 使用`<div calss="column">`增加列。
+- 增加分数宽度形式的类来设置列的宽度(例如,`.one-fourth`)。
 
-### Demo
+### 演示
 
-In practice, your columns will look like the example below.
+实际中，你的列将会看起来像下面的例子这样。
 
 {% example html %}
 <div class="container">
@@ -79,9 +81,9 @@ In practice, your columns will look like the example below.
 </div>
 {% endexample %}
 
-### Centered
+### 居中
 
-Columns can be [centered](/utilities/#centering-content) by adding `.centered` to the `.column` class.
+可以在`.column`类中添加`centered`使列[居中](/utilities/#centering-content)。
 
 {% example html %}
 <div class="columns">
