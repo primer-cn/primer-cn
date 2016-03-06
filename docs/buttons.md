@@ -1,70 +1,72 @@
 ---
 layout: page
-title: Buttons
+title: 按钮
 ---
 
-Buttons are used for **actions**, like in forms, while textual hyperlinks are used for **destinations**, or moving from one page to another.
+按钮用于**行为**，比如在表单中，而超链接文本用于**目的地**，或者从一个页面跳转到另一个页面。
 
-## Contents
+## 目录
 
 * Will be replaced with the ToC, excluding the "Contents" header
 {:toc}
 
-## Default buttons
+## 默认按钮
 
-Use the standard—yet classy—`.btn` for form actions and primary page actions. These are used extensively around the site.
+使用标准的——而非经典的——`.btn`作用图表单行为和基本的页面行为 。这些广泛的在网站中使用。
 
-When using a `<button>` element, **always specify a `type`**. When using a `<a>` element, **always add `role="button"` for accessibility**.
+当使用一个`<button>`元素时， **总是需要指定一个`type`** 。当使用一个 `<a>` 元素时， **为了可到达总是需要添加`role="button"`** 。
 
 {% example html %}
 <button class="btn" type="button">Button button</button>
 <a class="btn" href="#" role="button">Link button</a>
 {% endexample %}
 
-You can find them in two sizes: the default `.btn` and the smaller `.btn-sm`.
+你可以使用两种尺寸：默认大小`.btn`和小尺寸的`.btn-sm`。
 
 {% example html %}
 <button class="btn" type="button">Button</button>
 <button class="btn btn-sm" type="button">Small button</button>
 {% endexample %}
 
-## Primary
+## 原色
 
-Primary buttons are green and are used to indicate the *primary* action on a page. When you need your buttons to stand out, use `.btn.btn-primary`. You can use it with both button sizes—just add `.btn-primary`.
+原色按钮是绿色的，它被用来表明页面中的*主要*行为。当你需要突出你的按钮时，使用`.btn .btn-primary`。
+你可以使用两种按钮尺寸——只是增加`.btn-primary`。
 
 {% example html %}
 <button class="btn btn-primary" type="button">Primary button</button>
 <button class="btn btn-sm btn-primary" type="button">Small primary button</button>
 {% endexample %}
 
-## Danger
+## 危险
 
-Danger buttons are red. They help reiterate that the intended action is important or potentially dangerous (e.g., deleting a repo or transferring ownership). Similar to the primary buttons, just add `.btn-danger`.
+危险按钮是红色的。它们用来帮助强调接下来的行为是重要的或者可能是危险的（比如，删除一个仓库或者转移所有权）。
+和原色按钮类似，只是增加`.btn-danger`。
 
 {% example html %}
 <button class="btn btn-danger" type="button">Danger button</button>
 <button class="btn btn-sm btn-danger" type="button">Small danger button</button>
 {% endexample %}
 
-## Outline
+## 轮廓
 
-Outline buttons downplay an action as they appear like boxy links. Just add `.btn-outline` and go.
+轮廓按钮将行为轻描淡写使它们显得像一个方方正正的链接。只要添加`.btn-outline`就可以了。
 
 {% example html %}
 <button class="btn btn-outline" type="button">Outline button</button>
 <button class="btn btn-sm btn-outline" type="button">Outline button</button>
 {% endexample %}
 
-## Disabled state
+## 不可用状态
 
-Disable `<button>` elements with the boolean `disabled` attribute and `<a>` elements with the `.disabled` class.
+在`<button>`元素中使用`disabled`属性，在`<a>`标签中使用`.disabled`类来使按钮不可用。
 
 {% example html %}
 <button class="btn" type="button" disabled>Disabled button</button>
 <a class="btn disabled" href="#" role="button">Disabled button</a>
 {% endexample %}
 
-Similar styles are applied to primary, danger, and outline buttons:
+在原色，危险和轮廓按钮中也是类似的样式：
 
 {% example html %}
 <button class="btn btn-primary" type="button" disabled>Disabled button</button>
@@ -81,20 +83,20 @@ Similar styles are applied to primary, danger, and outline buttons:
 <a class="btn btn-outline disabled" href="#" role="button">Disabled button</a>
 {% endexample %}
 
-## Block buttons
+## 块按钮
 
-Make any button full-width by adding `.btn-block`. It adds `width: 100%;`, changes the `display` from `inline-block` to `block`, and centers the button text.
+通过添加`.btn-block`使任何按钮充满整个宽度。它增加了`width: 100%`，`diplay`由`inline-block`改变到`block`，并居中按钮文本。
 
 {% example html %}
 <p><button class="btn btn-block" type="button">Block button</button></p>
 <p><button class="btn btn-sm btn-block" type="button">Small block button</button></p>
 {% endexample %}
 
-## With counts
+## 计数
 
-You can easily append a count to a **small button**. Add the `.with-count` class to the `.btn-sm` and then add the `.social-count` after the button.
+你可以为**小按钮**简单的添加一个计数。在`.btn-sm`中增加`.with-count`类，然后在按钮后面增加`.social-count`。
 
-**Be sure to clear the float added by the additional class.**
+**一定要在附加的类上清除浮动。**
 
 {% example html %}
 <div class="clearfix">
@@ -106,7 +108,7 @@ You can easily append a count to a **small button**. Add the `.with-count` class
 </div>
 {% endexample %}
 
-You can also use the [counter](../utilities/#counter) component within buttons:
+你也可以在按钮中使用[counter](../utilities/#counter)组件：
 
 {% example html %}
 <button class="btn" type="button">
@@ -130,9 +132,9 @@ You can also use the [counter](../utilities/#counter) component within buttons:
 </button>
 {% endexample %}
 
-## Button groups
+## 按钮组
 
-Have a hankering for a series of buttons that are attached to one another? Wrap them in a `.btn-group` and the buttons will be rounded and spaced automatically.
+渴望一系列的按钮一个接着一个吗？把他们包裹在`.btn-group`里面，然后按钮将会团在一起并按照分组自动隔开。
 
 {% example html %}
 <div class="btn-group">
@@ -154,9 +156,9 @@ Have a hankering for a series of buttons that are attached to one another? Wrap 
 </div>
 {% endexample %}
 
-Add `.button_to` to `<form>`s within `.btn-group`s for proper spacing and rounded corners.
+在`.btn-group`中的`<form`上添加`.button_to`可以显示适当的间距和圆角。
 
-**Heads up!** This class name is inconsistent and will change in the next major version.
+**注意！**这个类名有一定的矛盾，在接下来的主要版本中将要改变。
 
 {% example html %}
 <div class="btn-group">
@@ -168,9 +170,9 @@ Add `.button_to` to `<form>`s within `.btn-group`s for proper spacing and rounde
 </div>
 {% endexample %}
 
-## Hidden text button
+## 隐藏文本按钮
 
-Use `.hidden-text-expander` to indicate and toggle hidden text.
+使用`.hidden-text-expander`来指示和切换隐藏文本。
 
 {% example html %}
 <span class="hidden-text-expander">
@@ -178,4 +180,4 @@ Use `.hidden-text-expander` to indicate and toggle hidden text.
 </span>
 {% endexample %}
 
-You can also make the expander appear inline by adding `.inline`.
+你也可以通过添加`.inline`来使隐藏的内容在行内出现。
