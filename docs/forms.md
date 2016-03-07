@@ -1,29 +1,30 @@
 ---
 layout: page
-title: Forms
+title: 表单
 ---
 
-Style individual form controls and utilize common layouts.
+控制独特的表单风格并利用通用的布局。
 
 <div class="flash">
-  <strong>Heads up!</strong> Forms need some reworking to clean up the specificity and required markup. We'll get to that soon!
+  <strong>注意！</strong> 表单需要一些重写来清除特性并需要一些标记。我们马上就会学到！
 </div>
 
-## Contents
+## 目录
 
 * Will be replaced with the ToC, excluding the "Contents" header
 {:toc}
 
-## Overview
+## 概述
 
-- We reset several elements' default styles for cross browser consistency and easier manipulation later. This includes `<fieldset>`s, WebKit validation bubbles, and most textual `<input>`s.
-- Specific types of textual `<input>`s are styled automatically, but `.form-control` is available should you need it.
-- Always declare a `type` on your `<button>`s.
-- Form layouts rely on form groups.
+- 为了兼容不同浏览器和简化以后的操作，我们重置一些元素的默认样式。这包括`<fieldset>`，WebKit验证泡沫，和大部分文本的`<input>`。
+- 具体类型的文本`<input>`设置了自动的样式，但是`.form-control`可能是你需要的。
+- 永远在你的`<button>`上声明一个`type`。
+- 表单依赖表单组布局。
 
-## Example form
+## 表单示例
 
-Form controls in Primer currently have no basic layout specified (this is by design). You'll need to use `<fieldset>`s, `<div>`s, or other elements and styles to rearrange them.
+Primer中的表单控制现在没有基本的特定布局（这取决于设计）。你需要使用`<fieldset>`，`<div>`，或者其他的元素和
+样式来重新调整它们。
 
 {% example html %}
 <form>
@@ -48,9 +49,9 @@ Form controls in Primer currently have no basic layout specified (this is by des
 </form>
 {% endexample %}
 
-## Form contrast
+## 对比度表单
 
-Textual form controls have a white background by default. You can change this to a light gray with `.input-contrast`.
+文本表单默认有一个白色的背景。你可以通过添加`.input-contrast`将其改变为浅灰色。
 
 {% example html %}
 <form>
@@ -59,11 +60,11 @@ Textual form controls have a white background by default. You can change this to
 </form>
 {% endexample %}
 
-## Sizing
+## 大小
 
-Make inputs smaller, larger, or full-width with an additional class.
+通过一个附加的类使输入框变小，变大，或者充满宽度。
 
-### Mini
+### 迷你型
 
 {% example html %}
 <form>
@@ -71,7 +72,7 @@ Make inputs smaller, larger, or full-width with an additional class.
 </form>
 {% endexample %}
 
-### Large
+### 大型
 
 {% example html %}
 <form>
@@ -79,7 +80,7 @@ Make inputs smaller, larger, or full-width with an additional class.
 </form>
 {% endexample %}
 
-### Block
+### 块状
 
 {% example html %}
 <form>
@@ -87,9 +88,9 @@ Make inputs smaller, larger, or full-width with an additional class.
 </form>
 {% endexample %}
 
-## Selects
+## 选择框
 
-Primer adds light `height` and `vertical-align` styles to `<select>`s for all browsers to render them consistently with textual inputs.
+为了使所有浏览器可以一致的渲染文本框，Primer给`<select>`增加了轻微的`height`和`vertical-align`。
 
 {% example html %}
 <form>
@@ -105,9 +106,9 @@ Primer adds light `height` and `vertical-align` styles to `<select>`s for all br
 </form>
 {% endexample %}
 
-### Custom
+### 定制
 
-Custom `<select>`s are also available—just add `.select`. **Only available in latest WebKit, Firefox, and IE browsers.**
+定制的`<select>`也可以通过添加`.select`来获得。**只有最新版的WebKit,Firefox和IE浏览器才可用**。
 
 {% example html %}
 <form>
@@ -123,9 +124,9 @@ Custom `<select>`s are also available—just add `.select`. **Only available in 
 </form>
 {% endexample %}
 
-### Small
+### 小型
 
-Use the `.select-sm` class to resize both default and custom `<select>`s to match the size of [our small buttons](/buttons/#default-buttons).
+使用`.select-sm`类来使默认的和定制的`<select>`调整大小，以适应[我们小型按钮](/buttons/#default-buttons)的尺寸。
 
 {% example html %}
 <select class="select-sm">
@@ -149,7 +150,7 @@ Use the `.select-sm` class to resize both default and custom `<select>`s to matc
 </select>
 {% endexample %}
 
-## Form groups
+## 表单群组
 
 {% example html %}
 <form>
@@ -175,9 +176,10 @@ Use the `.select-sm` class to resize both default and custom `<select>`s to matc
 </form>
 {% endexample %}
 
-## Form group validation
+## 表单组验证
 
-Convey errors and warnings for form groups. Add the appropriate class—either `.errored` or `.warn`—to the `<dl class="form">` to start. Then, house your error messaging in an additional `<dd>` with either `.error` or `.warning`.
+给我们的表单群组传送错误和警告信息。在`<dl class="form">`中添加适当的类，`.errored`或者`.warn`。
+然后把你的错误信息放在一个附加的`<dd>`中，使用`.error`或者`.warning`。
 
 {% example html %}
 <form>
@@ -195,9 +197,9 @@ Convey errors and warnings for form groups. Add the appropriate class—either `
 </form>
 {% endexample %}
 
-## Checkboxes and radios
+## 复选框和单选按钮
 
-Utilities to spice up the alignment and styling of checkbox and radio controls.
+使文本和方框对齐并给复选框和单选按钮控制添加样式。
 
 {% example html %}
 <form>
@@ -213,7 +215,7 @@ Utilities to spice up the alignment and styling of checkbox and radio controls.
 </form>
 {% endexample %}
 
-You may also add emphasis to the label:
+你可能也要给标签添加强调：
 
 {% example html %}
 <form>
@@ -226,9 +228,9 @@ You may also add emphasis to the label:
 </form>
 {% endexample %}
 
-## Input group
+## 输入框组
 
-Attached an input and button to one another.
+使输入框和按钮相互附着。
 
 {% example html %}
 <form>
@@ -243,9 +245,9 @@ Attached an input and button to one another.
 </form>
 {% endexample %}
 
-## Form actions
+## 表单行为
 
-Align buttons to the right—via `float: right` on the buttons—in forms with `.form-actions`. The floats are automatically cleared for you.
+通过`float:right`使带有`.form-actions`表单中的按钮右对齐。已经为你自动清除了漂浮。
 
 {% example html %}
 <div class="form-actions">
