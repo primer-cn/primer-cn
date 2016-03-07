@@ -10,7 +10,7 @@
     <meta name="author" content="">
 
     <title>
-      Forms &middot; Primer
+      表单 &middot; Primer
     </title>
 
     <link rel="stylesheet" href="/docs.css">
@@ -56,7 +56,7 @@
   <a class="menu-item " href="/buttons/">
     按钮
   </a>
-  <a class="menu-item " href="/forms/">
+  <a class="menu-item selected" href="/forms/">
     表单
   </a>
   <a class="menu-item " href="/nav/">
@@ -98,52 +98,53 @@
   </div>
   <div class="three-fourths column markdown-body">
     <h1 class="page-title">
-      Forms
+      表单
     </h1>
     <div class="markdown-body">
-      <p>Style individual form controls and utilize common layouts.</p>
+      <p>控制独特的表单风格并利用通用的布局。</p>
 
 <div class="flash">
-  <strong>Heads up!</strong> Forms need some reworking to clean up the specificity and required markup. We'll get to that soon!
+  <strong>注意！</strong> 表单需要一些重写来清除特性并需要一些标记。我们马上就会学到！
 </div>
 
-<h2 id="contents">Contents</h2>
+<h2 id="section">目录</h2>
 
 <ul id="markdown-toc">
-  <li><a href="#contents" id="markdown-toc-contents">Contents</a></li>
-  <li><a href="#overview" id="markdown-toc-overview">Overview</a></li>
-  <li><a href="#example-form" id="markdown-toc-example-form">Example form</a></li>
-  <li><a href="#form-contrast" id="markdown-toc-form-contrast">Form contrast</a></li>
-  <li><a href="#sizing" id="markdown-toc-sizing">Sizing</a>    <ul>
-      <li><a href="#mini" id="markdown-toc-mini">Mini</a></li>
-      <li><a href="#large" id="markdown-toc-large">Large</a></li>
-      <li><a href="#block" id="markdown-toc-block">Block</a></li>
+  <li><a href="#section" id="markdown-toc-section">目录</a></li>
+  <li><a href="#section-1" id="markdown-toc-section-1">概述</a></li>
+  <li><a href="#section-2" id="markdown-toc-section-2">表单示例</a></li>
+  <li><a href="#section-3" id="markdown-toc-section-3">对比度表单</a></li>
+  <li><a href="#section-4" id="markdown-toc-section-4">大小</a>    <ul>
+      <li><a href="#section-5" id="markdown-toc-section-5">迷你型</a></li>
+      <li><a href="#section-6" id="markdown-toc-section-6">大型</a></li>
+      <li><a href="#section-7" id="markdown-toc-section-7">块状</a></li>
     </ul>
   </li>
-  <li><a href="#selects" id="markdown-toc-selects">Selects</a>    <ul>
-      <li><a href="#custom" id="markdown-toc-custom">Custom</a></li>
-      <li><a href="#small" id="markdown-toc-small">Small</a></li>
+  <li><a href="#section-8" id="markdown-toc-section-8">选择框</a>    <ul>
+      <li><a href="#section-9" id="markdown-toc-section-9">定制</a></li>
+      <li><a href="#section-10" id="markdown-toc-section-10">小型</a></li>
     </ul>
   </li>
-  <li><a href="#form-groups" id="markdown-toc-form-groups">Form groups</a></li>
-  <li><a href="#form-group-validation" id="markdown-toc-form-group-validation">Form group validation</a></li>
-  <li><a href="#checkboxes-and-radios" id="markdown-toc-checkboxes-and-radios">Checkboxes and radios</a></li>
-  <li><a href="#input-group" id="markdown-toc-input-group">Input group</a></li>
-  <li><a href="#form-actions" id="markdown-toc-form-actions">Form actions</a></li>
+  <li><a href="#section-11" id="markdown-toc-section-11">表单群组</a></li>
+  <li><a href="#section-12" id="markdown-toc-section-12">表单组验证</a></li>
+  <li><a href="#section-13" id="markdown-toc-section-13">复选框和单选按钮</a></li>
+  <li><a href="#section-14" id="markdown-toc-section-14">输入框组</a></li>
+  <li><a href="#section-15" id="markdown-toc-section-15">表单行为</a></li>
 </ul>
 
-<h2 id="overview">Overview</h2>
+<h2 id="section-1">概述</h2>
 
 <ul>
-  <li>We reset several elements’ default styles for cross browser consistency and easier manipulation later. This includes <code class="highlighter-rouge">&lt;fieldset&gt;</code>s, WebKit validation bubbles, and most textual <code class="highlighter-rouge">&lt;input&gt;</code>s.</li>
-  <li>Specific types of textual <code class="highlighter-rouge">&lt;input&gt;</code>s are styled automatically, but <code class="highlighter-rouge">.form-control</code> is available should you need it.</li>
-  <li>Always declare a <code class="highlighter-rouge">type</code> on your <code class="highlighter-rouge">&lt;button&gt;</code>s.</li>
-  <li>Form layouts rely on form groups.</li>
+  <li>为了兼容不同浏览器和简化以后的操作，我们重置一些元素的默认样式。这包括<code class="highlighter-rouge">&lt;fieldset&gt;</code>，WebKit验证泡沫，和大部分文本的<code class="highlighter-rouge">&lt;input&gt;</code>。</li>
+  <li>具体类型的文本<code class="highlighter-rouge">&lt;input&gt;</code>设置了自动的样式，但是<code class="highlighter-rouge">.form-control</code>可能是你需要的。</li>
+  <li>永远在你的<code class="highlighter-rouge">&lt;button&gt;</code>上声明一个<code class="highlighter-rouge">type</code>。</li>
+  <li>表单依赖表单组布局。</li>
 </ul>
 
-<h2 id="example-form">Example form</h2>
+<h2 id="section-2">表单示例</h2>
 
-<p>Form controls in Primer currently have no basic layout specified (this is by design). You’ll need to use <code class="highlighter-rouge">&lt;fieldset&gt;</code>s, <code class="highlighter-rouge">&lt;div&gt;</code>s, or other elements and styles to rearrange them.</p>
+<p>Primer中的表单控制现在没有基本的特定布局（这取决于设计）。你需要使用<code class="highlighter-rouge">&lt;fieldset&gt;</code>，<code class="highlighter-rouge">&lt;div&gt;</code>，或者其他的元素和
+样式来重新调整它们。</p>
 
 <div class="docs-example clearfix"><form>
   <label for="name">Name</label>
@@ -186,9 +187,9 @@
   <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Submit<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;/form&gt;</span></code></pre></div>
 
-<h2 id="form-contrast">Form contrast</h2>
+<h2 id="section-3">对比度表单</h2>
 
-<p>Textual form controls have a white background by default. You can change this to a light gray with <code class="highlighter-rouge">.input-contrast</code>.</p>
+<p>文本表单默认有一个白色的背景。你可以通过添加<code class="highlighter-rouge">.input-contrast</code>将其改变为浅灰色。</p>
 
 <div class="docs-example clearfix"><form>
   <input type="text" placeholder="Default input" />
@@ -199,11 +200,11 @@
   <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"input-contrast"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Input with contrast"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;/form&gt;</span></code></pre></div>
 
-<h2 id="sizing">Sizing</h2>
+<h2 id="section-4">大小</h2>
 
-<p>Make inputs smaller, larger, or full-width with an additional class.</p>
+<p>通过一个附加的类使输入框变小，变大，或者充满宽度。</p>
 
-<h3 id="mini">Mini</h3>
+<h3 id="section-5">迷你型</h3>
 
 <div class="docs-example clearfix"><form>
   <input class="input-mini" type="text" placeholder="Mini input" />
@@ -212,7 +213,7 @@
   <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"input-mini"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Mini input"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;/form&gt;</span></code></pre></div>
 
-<h3 id="large">Large</h3>
+<h3 id="section-6">大型</h3>
 
 <div class="docs-example clearfix"><form>
   <input class="input-large" type="text" placeholder="Large input" />
@@ -221,7 +222,7 @@
   <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"input-large"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Large input"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;/form&gt;</span></code></pre></div>
 
-<h3 id="block">Block</h3>
+<h3 id="section-7">块状</h3>
 
 <div class="docs-example clearfix"><form>
   <input class="input-block" type="text" placeholder="Full-width input" />
@@ -230,9 +231,9 @@
   <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"input-block"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Full-width input"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;/form&gt;</span></code></pre></div>
 
-<h2 id="selects">Selects</h2>
+<h2 id="section-8">选择框</h2>
 
-<p>Primer adds light <code class="highlighter-rouge">height</code> and <code class="highlighter-rouge">vertical-align</code> styles to <code class="highlighter-rouge">&lt;select&gt;</code>s for all browsers to render them consistently with textual inputs.</p>
+<p>为了使所有浏览器可以一致的渲染文本框，Primer给<code class="highlighter-rouge">&lt;select&gt;</code>增加了轻微的<code class="highlighter-rouge">height</code>和<code class="highlighter-rouge">vertical-align</code>。</p>
 
 <div class="docs-example clearfix"><form>
   <select>
@@ -257,9 +258,9 @@
   <span class="nt">&lt;/select&gt;</span>
 <span class="nt">&lt;/form&gt;</span></code></pre></div>
 
-<h3 id="custom">Custom</h3>
+<h3 id="section-9">定制</h3>
 
-<p>Custom <code class="highlighter-rouge">&lt;select&gt;</code>s are also available—just add <code class="highlighter-rouge">.select</code>. <strong>Only available in latest WebKit, Firefox, and IE browsers.</strong></p>
+<p>定制的<code class="highlighter-rouge">&lt;select&gt;</code>也可以通过添加<code class="highlighter-rouge">.select</code>来获得。<strong>只有最新版的WebKit,Firefox和IE浏览器才可用</strong>。</p>
 
 <div class="docs-example clearfix"><form>
   <select class="select">
@@ -284,9 +285,9 @@
   <span class="nt">&lt;/select&gt;</span>
 <span class="nt">&lt;/form&gt;</span></code></pre></div>
 
-<h3 id="small">Small</h3>
+<h3 id="section-10">小型</h3>
 
-<p>Use the <code class="highlighter-rouge">.select-sm</code> class to resize both default and custom <code class="highlighter-rouge">&lt;select&gt;</code>s to match the size of <a href="/buttons/#default-buttons">our small buttons</a>.</p>
+<p>使用<code class="highlighter-rouge">.select-sm</code>类来使默认的和定制的<code class="highlighter-rouge">&lt;select&gt;</code>调整大小，以适应<a href="/buttons/#default-buttons">我们小型按钮</a>的尺寸。</p>
 
 <div class="docs-example clearfix"><select class="select-sm">
   <option>Choose an option</option>
@@ -327,7 +328,7 @@
   <span class="nt">&lt;option&gt;</span>Battlestar Galactica<span class="nt">&lt;/option&gt;</span>
 <span class="nt">&lt;/select&gt;</span></code></pre></div>
 
-<h2 id="form-groups">Form groups</h2>
+<h2 id="section-11">表单群组</h2>
 
 <div class="docs-example clearfix"><form>
   <dl class="form">
@@ -372,9 +373,10 @@
   <span class="nt">&lt;/dl&gt;</span>
 <span class="nt">&lt;/form&gt;</span></code></pre></div>
 
-<h2 id="form-group-validation">Form group validation</h2>
+<h2 id="section-12">表单组验证</h2>
 
-<p>Convey errors and warnings for form groups. Add the appropriate class—either <code class="highlighter-rouge">.errored</code> or <code class="highlighter-rouge">.warn</code>—to the <code class="highlighter-rouge">&lt;dl class="form"&gt;</code> to start. Then, house your error messaging in an additional <code class="highlighter-rouge">&lt;dd&gt;</code> with either <code class="highlighter-rouge">.error</code> or <code class="highlighter-rouge">.warning</code>.</p>
+<p>给我们的表单群组传送错误和警告信息。在<code class="highlighter-rouge">&lt;dl class="form"&gt;</code>中添加适当的类，<code class="highlighter-rouge">.errored</code>或者<code class="highlighter-rouge">.warn</code>。
+然后把你的错误信息放在一个附加的<code class="highlighter-rouge">&lt;dd&gt;</code>中，使用<code class="highlighter-rouge">.error</code>或者<code class="highlighter-rouge">.warning</code>。</p>
 
 <div class="docs-example clearfix"><form>
   <dl class="form errored">
@@ -403,9 +405,9 @@
   <span class="nt">&lt;/dl&gt;</span>
 <span class="nt">&lt;/form&gt;</span></code></pre></div>
 
-<h2 id="checkboxes-and-radios">Checkboxes and radios</h2>
+<h2 id="section-13">复选框和单选按钮</h2>
 
-<p>Utilities to spice up the alignment and styling of checkbox and radio controls.</p>
+<p>使文本和方框对齐并给复选框和单选按钮控制添加样式。</p>
 
 <div class="docs-example clearfix"><form>
   <div class="form-checkbox">
@@ -430,7 +432,7 @@
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/form&gt;</span></code></pre></div>
 
-<p>You may also add emphasis to the label:</p>
+<p>你可能也要给标签添加强调：</p>
 
 <div class="docs-example clearfix"><form>
   <div class="form-checkbox">
@@ -449,9 +451,9 @@
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/form&gt;</span></code></pre></div>
 
-<h2 id="input-group">Input group</h2>
+<h2 id="section-14">输入框组</h2>
 
-<p>Attached an input and button to one another.</p>
+<p>使输入框和按钮相互附着。</p>
 
 <div class="docs-example clearfix"><form>
   <div class="input-group">
@@ -474,9 +476,9 @@
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/form&gt;</span></code></pre></div>
 
-<h2 id="form-actions">Form actions</h2>
+<h2 id="section-15">表单行为</h2>
 
-<p>Align buttons to the right—via <code class="highlighter-rouge">float: right</code> on the buttons—in forms with <code class="highlighter-rouge">.form-actions</code>. The floats are automatically cleared for you.</p>
+<p>通过<code class="highlighter-rouge">float:right</code>使带有<code class="highlighter-rouge">.form-actions</code>表单中的按钮右对齐。已经为你自动清除了漂浮。</p>
 
 <div class="docs-example clearfix"><div class="form-actions">
   <button type="button" class="btn btn-primary">Save changes</button>
