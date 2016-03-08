@@ -10,7 +10,7 @@
     <meta name="author" content="">
 
     <title>
-      Navigation &middot; Primer
+      导航 &middot; Primer
     </title>
 
     <link rel="stylesheet" href="/docs.css">
@@ -59,7 +59,7 @@
   <a class="menu-item " href="/forms/">
     表单
   </a>
-  <a class="menu-item " href="/nav/">
+  <a class="menu-item selected" href="/nav/">
     导航
   </a>
   <a class="menu-item " href="/alerts/">
@@ -98,24 +98,24 @@
   </div>
   <div class="three-fourths column markdown-body">
     <h1 class="page-title">
-      Navigation
+      导航
     </h1>
     <div class="markdown-body">
-      <p>Primer comes with several navigation components. Some were designed with singular purposes, while others were design to be more flexible and appear quite frequently.</p>
+      <p>Primer有几个导航组件。有些以单一的目标设计的，但其他的为了更加灵活而设计的，并且使用频率很高。</p>
 
-<h2 id="contents">Contents</h2>
+<h2 id="section">目录</h2>
 
 <ul id="markdown-toc">
-  <li><a href="#contents" id="markdown-toc-contents">Contents</a></li>
-  <li><a href="#menu" id="markdown-toc-menu">Menu</a></li>
-  <li><a href="#tabnav" id="markdown-toc-tabnav">Tabnav</a></li>
-  <li><a href="#filter-list" id="markdown-toc-filter-list">Filter list</a></li>
-  <li><a href="#breadcrumb" id="markdown-toc-breadcrumb">Breadcrumb</a></li>
+  <li><a href="#section" id="markdown-toc-section">目录</a></li>
+  <li><a href="#section-1" id="markdown-toc-section-1">菜单</a></li>
+  <li><a href="#section-2" id="markdown-toc-section-2">标签导航</a></li>
+  <li><a href="#section-3" id="markdown-toc-section-3">过滤器列表</a></li>
+  <li><a href="#section-4" id="markdown-toc-section-4">面包屑导航</a></li>
 </ul>
 
-<h2 id="menu">Menu</h2>
+<h2 id="section-1">菜单</h2>
 
-<p>The menu is a vertical list of navigational links. <strong>A menu’s width and placement must be set by you.</strong> If you like, just use our grid columns as a parent. Otherwise, apply a custom <code class="highlighter-rouge">width</code>.</p>
+<p>菜单是垂直列表的导航链接。<strong>你必须设置菜单的宽度和位置。</strong>如果你喜欢，只要使用我们的表格列作为父节点，并且设置一自定义的<code class="highlighter-rouge">width</code>。</p>
 
 <div class="docs-example clearfix"><nav class="menu">
   <a class="menu-item selected" href="#">Account</a>
@@ -130,7 +130,7 @@
   <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Notifications<span class="nt">&lt;/a&gt;</span>
 <span class="nt">&lt;/nav&gt;</span></code></pre></div>
 
-<p>There are a few subcomponents and add-ons that work well with the menu, including avatars, counters, and Octicons.</p>
+<p>还有一些和菜单一起工作很好的子组件和附加组件，包括头像，计数器，和图标。</p>
 
 <div class="docs-example clearfix"><nav class="menu">
   <a class="menu-item selected" href="#">
@@ -171,7 +171,7 @@
   <span class="nt">&lt;/a&gt;</span>
 <span class="nt">&lt;/nav&gt;</span></code></pre></div>
 
-<p>You can also add optional headings to a menu. Feel free to use nearly any semantic element with the <code class="highlighter-rouge">.menu-heading</code> class, including inline elements, headings, and more.</p>
+<p>你也可以随意地给菜单增加标题。感觉自由地使用近乎语义要素的<code class="highlighter-rouge">.menu-heading</code>类，包括行内元素，标题，和其他更多的。</p>
 
 <div class="docs-example clearfix"><nav class="menu">
   <span class="menu-heading">Menu heading</span>
@@ -188,9 +188,9 @@
   <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Notifications<span class="nt">&lt;/a&gt;</span>
 <span class="nt">&lt;/nav&gt;</span></code></pre></div>
 
-<h2 id="tabnav">Tabnav</h2>
+<h2 id="section-2">标签导航</h2>
 
-<p>When you need to toggle between different views, consider using a tabnav. It’ll given you a left-aligned horizontal row of… tabs!</p>
+<p>当你需要在不同视图之间进行切换时，考虑使用标签导航。它将给你提供一行左对齐的水平标签！</p>
 
 <div class="docs-example clearfix"><div class="tabnav">
   <nav class="tabnav-tabs">
@@ -205,7 +205,7 @@
   <span class="nt">&lt;/nav&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
-<p>Use <code class="highlighter-rouge">.right</code> to align additional elements in the <code class="highlighter-rouge">.tabnav</code>:</p>
+<p>在<code class="highlighter-rouge">.tabnav</code>中的添加附加元素时使用<code class="highlighter-rouge">.right</code>。</p>
 
 <div class="docs-example clearfix"><div class="tabnav">
   <a class="btn btn-sm right" href="#">Button</a>
@@ -222,7 +222,7 @@
   <span class="nt">&lt;/nav&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
-<p>Additional bits of text and links can be styled for optimal placement with <code class="highlighter-rouge">.tabnav-extra</code>:</p>
+<p>附件的少量文本和链接可以使用<code class="highlighter-rouge">.tabnav-extra</code>来优化配置样式：</p>
 
 <div class="docs-example clearfix"><div class="tabnav">
   <div class="tabnav-extra right">
@@ -272,9 +272,9 @@
   <span class="nt">&lt;/nav&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
-<h2 id="filter-list">Filter list</h2>
+<h2 id="section-3">过滤器列表</h2>
 
-<p>A vertical list of filters. Grey text on white background. Selecting a filter from the list will fill its background with blue and make the text white.</p>
+<p>一个垂直的过滤器列表。白色的背景灰色的文本。列表中被选择的部分将会充满蓝色背景并使文本变成白色。</p>
 
 <div class="docs-example clearfix"><ul class="filter-list">
   <li>
@@ -315,9 +315,9 @@
   <span class="nt">&lt;/li&gt;</span>
 <span class="nt">&lt;/ul&gt;</span></code></pre></div>
 
-<h2 id="breadcrumb">Breadcrumb</h2>
+<h2 id="section-4">面包屑导航</h2>
 
-<p><em>Coming soon…</em></p>
+<p><em>即将到来…</em></p>
 
     </div>
   </div>
