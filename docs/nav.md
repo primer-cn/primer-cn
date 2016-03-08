@@ -1,18 +1,18 @@
 ---
 layout: page
-title: Navigation
+title: 导航
 ---
 
-Primer comes with several navigation components. Some were designed with singular purposes, while others were design to be more flexible and appear quite frequently.
+Primer有几个导航组件。有些以单一的目标设计的，但其他的为了更加灵活而设计的，并且使用频率很高。
 
-## Contents
+## 目录
 
 * Will be replaced with the ToC, excluding the "Contents" header
 {:toc}
 
-## Menu
+## 菜单
 
-The menu is a vertical list of navigational links. **A menu's width and placement must be set by you.** If you like, just use our grid columns as a parent. Otherwise, apply a custom `width`.
+菜单是垂直列表的导航链接。**你必须设置菜单的宽度和位置。**如果你喜欢，只要使用我们的表格列作为父节点，并且设置一自定义的`width`。
 
 {% example html %}
 <nav class="menu">
@@ -23,7 +23,7 @@ The menu is a vertical list of navigational links. **A menu's width and placemen
 </nav>
 {% endexample %}
 
-There are a few subcomponents and add-ons that work well with the menu, including avatars, counters, and Octicons.
+还有一些和菜单一起工作很好的子组件和附加组件，包括头像，计数器，和图标。
 
 {% example html %}
 <nav class="menu">
@@ -47,7 +47,7 @@ There are a few subcomponents and add-ons that work well with the menu, includin
 </nav>
 {% endexample %}
 
-You can also add optional headings to a menu. Feel free to use nearly any semantic element with the `.menu-heading` class, including inline elements, headings, and more.
+你也可以随意地给菜单增加标题。感觉自由地使用近乎语义要素的`.menu-heading`类，包括行内元素，标题，和其他更多的。
 
 {% example html %}
 <nav class="menu">
@@ -60,9 +60,9 @@ You can also add optional headings to a menu. Feel free to use nearly any semant
 {% endexample %}
 
 
-## Tabnav
+## 标签导航
 
-When you need to toggle between different views, consider using a tabnav. It'll given you a left-aligned horizontal row of... tabs!
+当你需要在不同视图之间进行切换时，考虑使用标签导航。它将给你提供一行左对齐的水平标签！
 
 {% example html %}
 <div class="tabnav">
@@ -73,7 +73,7 @@ When you need to toggle between different views, consider using a tabnav. It'll 
 </div>
 {% endexample %}
 
-Use `.right` to align additional elements in the `.tabnav`:
+在`.tabnav`中的添加附加元素时使用`.right`。
 
 {% example html %}
 <div class="tabnav">
@@ -85,7 +85,7 @@ Use `.right` to align additional elements in the `.tabnav`:
 </div>
 {% endexample %}
 
-Additional bits of text and links can be styled for optimal placement with `.tabnav-extra`:
+附件的少量文本和链接可以使用`.tabnav-extra`来优化配置样式：
 
 {% example html %}
 <div class="tabnav">
@@ -116,9 +116,9 @@ Additional bits of text and links can be styled for optimal placement with `.tab
 </div>
 {% endexample %}
 
-## Filter list
+## 过滤器列表
 
-A vertical list of filters. Grey text on white background. Selecting a filter from the list will fill its background with blue and make the text white.
+一个垂直的过滤器列表。白色的背景灰色的文本。列表中被选择的部分将会充满蓝色背景并使文本变成白色。
 
 {% example html %}
 <ul class="filter-list">
@@ -142,6 +142,6 @@ A vertical list of filters. Grey text on white background. Selecting a filter fr
 </ul>
 {% endexample %}
 
-## Breadcrumb
+## 面包屑导航
 
-*Coming soon...*
+*即将到来...*
