@@ -1,18 +1,18 @@
 ---
 layout: page
-title: Alerts
+title: 通知
 ---
 
-Flash messages, or alerts, inform users of successful or pending actions. Use them sparingly. Don't show more than one at a time.
+弹出消息，或者警告，告知用户成功信息或者待解决的行为。尽量少的使用它们。不要一次展示多个弹窗。
 
-## Contents
+## 目录
 
 * Will be replaced with the ToC, excluding the "Contents" header
 {:toc}
 
-## Default
+## 默认的
 
-Flash messages start off looking decently neutral—they're just light blue rounded rectangles.
+弹出消息会在一个合适的地方出现——它们只是浅蓝色的圆角矩形。
 
 {% example html %}
 <div class="flash">
@@ -20,7 +20,7 @@ Flash messages start off looking decently neutral—they're just light blue roun
 </div>
 {% endexample %}
 
-You can put multiple paragraphs of text in a flash message—the last paragraph's bottom `margin` will be automatically override.
+你可以把多个段落的文本放到一个弹出消息中——最后一个段落的底部`margin`将会被自动覆盖。
 
 {% example html %}
 <div class="flash">
@@ -29,7 +29,7 @@ You can put multiple paragraphs of text in a flash message—the last paragraph'
 </div>
 {% endexample %}
 
-Should the need arise, you can quickly space out your flash message from surrounding content with a `.flash-messages` wrapper. *Note the extra top and bottom margin in the example below.*
+如果需求提升，你可以使用`.flash-messages`快速的把你的弹出消息和周围的内容分开。*注意下例中额外的上下边界*
 
 {% example html %}
 <div class="flash-messages">
@@ -39,9 +39,9 @@ Should the need arise, you can quickly space out your flash message from surroun
 </div>
 {% endexample %}
 
-## Variations
+## 变种
 
-Add `.flash-warn` or `.flash-error` to the flash message to make it yellow or red, respectively.
+在弹出消息中添加`.flash-warn`或者`.flash-error`可以分别使它变成黄色和红色。
 
 {% example html %}
 <div class="flash flash-warn">
@@ -55,9 +55,9 @@ Add `.flash-warn` or `.flash-error` to the flash message to make it yellow or re
 </div>
 {% endexample %}
 
-## With icon
+## 带图标
 
-Add an icon to the left of the flash message to give it some funky fresh attention. Just add `.flash-with-icon` and your Octicon.
+在弹出消息的左侧添加一个图标让它展现出时髦并吸引注意力。只需要添加`.flash-with-icon`和你的图标。
 
 {% example html %}
 <div class="flash flash-with-icon">
@@ -66,9 +66,9 @@ Add an icon to the left of the flash message to give it some funky fresh attenti
 </div>
 {% endexample %}
 
-## Dismiss
+## 解散
 
-Add a JavaScript enabled (via Crema) dismiss (close) icon on the right of any flash message.
+在任何弹出消息的右侧添加一个JavaScript使它可以解散(关闭)的图标。
 
 {% example html %}
 <div class="flash">
