@@ -10,7 +10,7 @@
     <meta name="author" content="">
 
     <title>
-      Alerts &middot; Primer
+      通知 &middot; Primer
     </title>
 
     <link rel="stylesheet" href="/docs.css">
@@ -62,7 +62,7 @@
   <a class="menu-item " href="/nav/">
     导航
   </a>
-  <a class="menu-item " href="/alerts/">
+  <a class="menu-item selected" href="/alerts/">
     通知
   </a>
   <a class="menu-item " href="/blankslate/">
@@ -98,24 +98,24 @@
   </div>
   <div class="three-fourths column markdown-body">
     <h1 class="page-title">
-      Alerts
+      通知
     </h1>
     <div class="markdown-body">
-      <p>Flash messages, or alerts, inform users of successful or pending actions. Use them sparingly. Don’t show more than one at a time.</p>
+      <p>弹出消息，或者警告，告知用户成功信息或者待解决的行为。尽量少的使用它们。不要一次展示多个弹窗。</p>
 
-<h2 id="contents">Contents</h2>
+<h2 id="section">目录</h2>
 
 <ul id="markdown-toc">
-  <li><a href="#contents" id="markdown-toc-contents">Contents</a></li>
-  <li><a href="#default" id="markdown-toc-default">Default</a></li>
-  <li><a href="#variations" id="markdown-toc-variations">Variations</a></li>
-  <li><a href="#with-icon" id="markdown-toc-with-icon">With icon</a></li>
-  <li><a href="#dismiss" id="markdown-toc-dismiss">Dismiss</a></li>
+  <li><a href="#section" id="markdown-toc-section">目录</a></li>
+  <li><a href="#section-1" id="markdown-toc-section-1">默认的</a></li>
+  <li><a href="#section-2" id="markdown-toc-section-2">变种</a></li>
+  <li><a href="#section-3" id="markdown-toc-section-3">带图标</a></li>
+  <li><a href="#section-4" id="markdown-toc-section-4">解散</a></li>
 </ul>
 
-<h2 id="default">Default</h2>
+<h2 id="section-1">默认的</h2>
 
-<p>Flash messages start off looking decently neutral—they’re just light blue rounded rectangles.</p>
+<p>弹出消息会在一个合适的地方出现——它们只是浅蓝色的圆角矩形。</p>
 
 <div class="docs-example clearfix"><div class="flash">
   Flash message goes here.
@@ -124,7 +124,7 @@
   Flash message goes here.
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
-<p>You can put multiple paragraphs of text in a flash message—the last paragraph’s bottom <code class="highlighter-rouge">margin</code> will be automatically override.</p>
+<p>你可以把多个段落的文本放到一个弹出消息中——最后一个段落的底部<code class="highlighter-rouge">margin</code>将会被自动覆盖。</p>
 
 <div class="docs-example clearfix"><div class="flash">
   <p>This is a longer flash message in it's own paragraph. It ends up looking something like this. If we keep adding more text, it'll eventually wrap to a new line.</p>
@@ -135,7 +135,7 @@
   <span class="nt">&lt;p&gt;</span>And this is another paragraph.<span class="nt">&lt;/p&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
-<p>Should the need arise, you can quickly space out your flash message from surrounding content with a <code class="highlighter-rouge">.flash-messages</code> wrapper. <em>Note the extra top and bottom margin in the example below.</em></p>
+<p>如果需求提升，你可以使用<code class="highlighter-rouge">.flash-messages</code>快速的把你的弹出消息和周围的内容分开。<em>注意下例中额外的上下边界</em></p>
 
 <div class="docs-example clearfix"><div class="flash-messages">
   <div class="flash">
@@ -148,9 +148,9 @@
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
-<h2 id="variations">Variations</h2>
+<h2 id="section-2">变种</h2>
 
-<p>Add <code class="highlighter-rouge">.flash-warn</code> or <code class="highlighter-rouge">.flash-error</code> to the flash message to make it yellow or red, respectively.</p>
+<p>在弹出消息中添加<code class="highlighter-rouge">.flash-warn</code>或者<code class="highlighter-rouge">.flash-error</code>可以分别使它变成黄色和红色。</p>
 
 <div class="docs-example clearfix"><div class="flash flash-warn">
   Flash message goes here.
@@ -166,9 +166,9 @@
   Flash message goes here.
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
-<h2 id="with-icon">With icon</h2>
+<h2 id="section-3">带图标</h2>
 
-<p>Add an icon to the left of the flash message to give it some funky fresh attention. Just add <code class="highlighter-rouge">.flash-with-icon</code> and your Octicon.</p>
+<p>在弹出消息的左侧添加一个图标让它展现出时髦并吸引注意力。只需要添加<code class="highlighter-rouge">.flash-with-icon</code>和你的图标。</p>
 
 <div class="docs-example clearfix"><div class="flash flash-with-icon">
   <span class="octicon octicon-alert"></span>
@@ -179,9 +179,9 @@
   Flash message with an icon goes here.
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
-<h2 id="dismiss">Dismiss</h2>
+<h2 id="section-4">解散</h2>
 
-<p>Add a JavaScript enabled (via Crema) dismiss (close) icon on the right of any flash message.</p>
+<p>在任何弹出消息的右侧添加一个JavaScript使它可以解散(关闭)的图标。</p>
 
 <div class="docs-example clearfix"><div class="flash">
   <span class="octicon octicon-x flash-close js-flash-close"></span>
