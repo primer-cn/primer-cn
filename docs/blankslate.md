@@ -1,18 +1,19 @@
 ---
 layout: page
-title: Blankslate
+title: 白板
 ---
 
-Blankslates are for when there is a lack of content within a page or section. Use them as placeholders to tell users why something isn't there. Be sure to provide an action to add content as well.
+白板是为了当一个页面或者章节上缺少内容的时候出现的。把它们当做一个占位符来告诉用户为什么在这里会缺少信息。
+也一定要提供一个行为了添加内容。
 
-## Contents
+## 目录
 
 * Will be replaced with the ToC, excluding the "Contents" header
 {:toc}
 
-## Basic example
+## 基础的例子
 
-Wrap some content in the outer `.blankslate` wrapper to give it the blankslate appearance.
+在一些内容的外面使用`.blankslate`包装让它表现为白板的外观。
 
 {% example html %}
 <div class="blankslate">
@@ -21,9 +22,10 @@ Wrap some content in the outer `.blankslate` wrapper to give it the blankslate a
 </div>
 {% endexample %}
 
-## With Octicons
+## 带图标
 
-When it helps the message, include `.mega-octicon`s as the first elements in the blank slate. Be sure to use relevant icons.
+当帮助消息中包含`.mega-octicon`并作为白板的第一个元素时。
+一定要使用相关的图标。
 
 {% example html %}
 <div class="blankslate">
@@ -35,13 +37,13 @@ When it helps the message, include `.mega-octicon`s as the first elements in the
 </div>
 {% endexample %}
 
-## Variations
+## 变化
 
-Add an additional optional class to the `.blankslate` to change its appearance.
+在`.blankslate`中添加一个额外的可选类来该表它的外观。
 
-### Fixed width
+### 调整宽度
 
-Narrows the blankslate container to not occupy the entire available width.
+缩小白板容器的大小来不占领所有可用的宽度。
 
 {% example html %}
 <div class="blankslate has-fixed-width">
@@ -50,9 +52,9 @@ Narrows the blankslate container to not occupy the entire available width.
 </div>
 {% endexample %}
 
-### Capped
+### 加盖的
 
-Removes the `border-radius` on the top corners.
+删除顶部角落的边框半径`border-radius`。
 
 {% example html %}
 <div class="blankslate capped">
@@ -61,9 +63,9 @@ Removes the `border-radius` on the top corners.
 </div>
 {% endexample %}
 
-### Spacious
+### 扩大的
 
-Significantly increases the vertical padding.
+显著地增加垂直填充。
 
 {% example html %}
 <div class="blankslate spacious">
@@ -72,9 +74,9 @@ Significantly increases the vertical padding.
 </div>
 {% endexample %}
 
-### No background
+### 无背景
 
-Removes the `background-color` and `border`.
+去除背景颜色`background-color`和边框`border`
 
 {% example html %}
 <div class="blankslate clean-background">
