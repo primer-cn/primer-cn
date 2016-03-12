@@ -1,36 +1,37 @@
 ---
 layout: page
-title: Avatars
+title: 头像
 ---
 
-Avatars are images that users can set as their profile picture. On GitHub, they're always going to be rounded squares. They can be custom photos, uploaded by users, or generated as Identicons as a placeholder.
+头像是用户可以设置他们轮廓照相的图片。在Github上，它们一直是圆角正方形的。
+它们可以是用户上传的自定义照片，或者系统生成用于识别的占位图片。
 
-## Contents
+## 目录
 
 * Will be replaced with the ToC, excluding the "Contents" header
 {:toc}
 
-## Basic example
+## 基础的例子
 
-Add `.avatar` to any `<img>` element to make it an avatar. This resets some key styles for alignment, address a Firefox image placeholder bug, and rounds the corners.
+在任何`<img>`元素添加`.avatar`使它成为一个头像。这重置了一些对齐的关键样式，解决Firefox图像占位的一个错误，并且使棱角变圆。
 
-Be sure to set `width` and `height` attributes for maximum browser performance.
+为了最大化浏览器性能吗，一定要设置宽度`width`和高度`height`属性。
 
 {% example html %}
 <img class="avatar" src="https://avatars3.githubusercontent.com/u/9919?v=3&s=144" width="72" height="72">
 {% endexample %}
 
-## Small avatars
+## 小头像
 
-We occasionally use smaller avatars. Anything less than `48px` wide should include the `.avatar-small` modifier class to reset the `border-radius` to a more appropriate level.
+我们偶尔的使用小头像。任何小于`48px`宽度的头像都应该包含`.avatar-small`调节类，用来重置边框半径`border-radius`为一个更加适当的级别。
 
 {% example html %}
 <img class="avatar avatar-small" src="https://avatars3.githubusercontent.com/u/9919?v=3&s=64" width="32" height="32">
 {% endexample %}
 
-## Parent-child avatars
+## 父子头像
 
-When you need a larger parent avatar, and a smaller child one, overlaid slightly, use the parent-child classes.
+当你需要一个大的父头像，和一个小的字头像，并轻微的叠加在一起时，使用父子(parent-child)类。
 
 {% example html %}
 <div class="avatar-parent-child left">
