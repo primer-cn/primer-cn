@@ -1,11 +1,11 @@
 ---
 layout: page
-title: Tooltips
+title: 工具提示
 ---
 
-Add tooltips built entirely in CSS to nearly any element. Just add a few classes and an `aria-label` attribute.
+完全在CSS中给任何元素周围添加工具提示。只需要添加一些类和一个独条标签`aria-label`属性。
 
-In addition, you'll want to specify a direction:
+另外，你还要指定一个方向：
 
 - `.tooltipped-n`
 - `.tooltipped-ne`
@@ -16,7 +16,7 @@ In addition, you'll want to specify a direction:
 - `.tooltipped-w`
 - `.tooltipped-nw`
 
-Tooltip classes will conflict with Octicon classes, and as such, must go on a parent element instead of the icon.
+工具提示类将会和图标类产生冲突，因此，必须要在父元素代替图标。
 
 {% example html %}
 <span class="tooltipped tooltipped-n" aria-label="This is the tooltip.">
