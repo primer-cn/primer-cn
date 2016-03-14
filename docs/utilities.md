@@ -49,7 +49,6 @@ title: 实用工具
 
 ## 内容居中
 
-Easily center **block level content** if it's not taking up the full width of the parent. Can be used [on grid columns](/layout/#centered) or any other elements.
 如果**块状级别内容**没有占满父元素的所有宽度，那么很容易是他的内容居中。可以使用在[栅格列](/layout/#centered)上或者其让任何元素。
 
 {% example html %}
