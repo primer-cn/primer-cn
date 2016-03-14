@@ -1,18 +1,18 @@
 ---
 layout: page
-title: Utilities
+title: 实用工具
 ---
 
-There are a handful of utilities in Primer for quick behaviors, floats, colors, alignment, and more.
+在Primer中还一些快速处理行为，浮动，颜色，对齐等的实用工具。
 
-## Contents
+## 目录
 
 * Will be replaced with the ToC, excluding the "Contents" header
 {:toc}
 
-## Truncation
+## 截断
 
-`.css-truncate` will shorten text with an ellipsis. The maximum width of the truncated text can be changed by overriding the max-width of the .css-truncate-target.
+`css-truncate`将使文本变短并用省略号替代。可以通过重写.css-truncate-target的最大宽度来改变被截断文本的最大宽度。
 
 {% example html %}
 <span class="branch-ref css-truncate css-truncate-target">
@@ -20,7 +20,7 @@ There are a handful of utilities in Primer for quick behaviors, floats, colors, 
 </span>
 {% endexample %}
 
-You can reveal the entire string on hover with the addition of `.expandable`.
+你可以通过添加`.expandable`使得在鼠标悬停时显示所有文本。
 
 {% example html %}
 <span class="css-truncate expandable">
@@ -28,17 +28,17 @@ You can reveal the entire string on hover with the addition of `.expandable`.
 </span>
 {% endexample %}
 
-## Counter
+## 计数器
 
-Add a number or unread indicator to navs and more with a counter.
+在导航中添加一个额外的计数器用来显示一个数字或者是未读指示。
 
 {% example html %}
 <span class="counter">9</span>
 {% endexample %}
 
-## Floats
+## 浮动
 
-Quickly float something to the left or right, and clear them later.
+快速的浮动某个东西到左边或者右边，并且在之后清除浮动。
 
 {% example html %}
 <div class="clearfix">
@@ -47,9 +47,10 @@ Quickly float something to the left or right, and clear them later.
 </div>
 {% endexample %}
 
-## Centering content
+## 内容居中
 
 Easily center **block level content** if it's not taking up the full width of the parent. Can be used [on grid columns](/layout/#centered) or any other elements.
+如果**块状级别内容**没有占满父元素的所有宽度，那么很容易是他的内容居中。可以使用在[栅格列](/layout/#centered)上或者其让任何元素。
 
 {% example html %}
 <nav class="menu centered">
@@ -61,9 +62,9 @@ Easily center **block level content** if it's not taking up the full width of th
 {% endexample %}
 
 
-## Text alignment
+## 文本对齐
 
-Change the `text-align` on elements with a class.
+在元素上使用一个类改变文本对齐`text-align`。
 
 {% example html %}
 <p class="text-left">Left aligned text.</p>
@@ -71,9 +72,9 @@ Change the `text-align` on elements with a class.
 <p class="text-center">Center aligned text.</p>
 {% endexample %}
 
-## Text color
+## 文本颜色
 
-Change the `color` of elements with a class.
+在一个元素上使用一个雷改变文本颜色`color`。
 
 {% example html %}
 <p class="text-open">Green/open text</p>
@@ -82,21 +83,22 @@ Change the `color` of elements with a class.
 <p class="text-pending">Pending text</p>
 {% endexample %}
 
-`.text-closed` and `.text-failure` are the same, as well as `.text-open` and `.text-success`.
+`.text-closed`和`.text-failure` 是一样的，同样`.text-open`和`.text-success`也是一样。
 
-## Muted link
+## 柔和的链接
 
-When you need a hyperlink to not be `$brand-blue`, use a `.muted-link`.
+当你需要一个不是蓝色底板的超链接时，使用`.muted-link`。
 
 {% example html %}
 Here is some example text. <a class="muted-link" href="#">And a muted link.</a>
 {% endexample %}
 
-## Flex table
+## 灵活的表格
 
-Flex table is a module for creating dynamically resizable elements that always sit on the same horizontal line (e.g., they never break to a new line). Using table styles in our CSS means it's cross browser friendly back to at least IE9.
+灵活表格是一个模型，它是为了创建动态可调整可以放在一行上的元素（比如，他们总是不会再一个新行上）。
+在我们的CSS中使用表格样式意味着它是跨浏览器友好的，可以至少在IE9上。
 
-Additional `margin` or `padding` may be required to properly space content.
+额外的外边距`margin`和内边距`padding`可能需要用来修正内容的空间。
 
 {% example html %}
 <div class="flex-table">
