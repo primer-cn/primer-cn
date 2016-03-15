@@ -1,27 +1,27 @@
 ---
 layout: page
-title: Guidelines
+title: 代码指南
 ---
 
-Best practices and guidelines for writing HTML and CSS with approachable formatting, syntax, and more.
+最佳实践和指南，为了写出亲切格式、语句等的HTML和CSS。
 
-## Contents
+## 目录
 
 * Will be replaced with the ToC, excluding the "Contents" header
 {:toc}
 
 ## HTML
 
-### General formatting
+### 基本格式
 
-* Use soft-tabs with a two space indent. Spaces are the only way to guarantee code renders the same in any person's environment.
-* Paragraphs of text should always be placed in a `<p>` tag. Never use multiple `<br>` tags.
-* Items in list form should always be in `<ul>`, `<ol>`, or `<dl>`. Never use a set of `<div>` or `<p>`.
-* Every form input that has text attached should utilize a `<label>` tag. **Especially radio or checkbox elements.**
-* Even though quotes around attributes is optional, always put quotes around attributes for readability.
-* Avoid writing closing tag comments, like `<!-- /.element -->`. This just adds to page load time. Plus, most editors have indentation guides and open-close tag highlighting.
-* Avoid trailing slashes in self-closing elements. For example, `<br>`, `<hr>`, `<img>`, and `<input>`.
-* Don't set `tabindex` manually—rely on the browser to set the order.
+* 使用软件标签的两个空格作为缩进。空格是保证代码在任何人的环境中都显示一致的唯一方式。
+* 文本的段落应该使用使用`<p>`标签。永远不要连续使用多个`<br>`标签。
+* 表单中的项目列表总是应该使用`<ul>`,`<ol>`,或者`<dl>`。永远不要使用一堆的`<div>`或者`<p>`。
+* 每个表单中输入框的附加文本都应该使用`<label>`标签。**特别是单选框和多选框元素。**
+* 即使属性的引号是可选的，为了可读性总是在属性的两边加上引号。
+* 避免在注释中书写关闭标签，如`<!-- /.element -->`。这只会增加页面的加载时间。另外，大多数编辑器有缩进标线和开关标签的高亮显示。
+* 避免在字闭合元素中中添加斜杠。如`<br>`,`<hr>`,`<img>`和`<input>`。
+* 不要手动设置标签下标`tabindex`——应该依赖于浏览器的顺序设置。
 
 {% highlight html %}
 <p class="line-note" data-attribute="106">
@@ -29,9 +29,9 @@ Best practices and guidelines for writing HTML and CSS with approachable formatt
 </p>
 {% endhighlight %}
 
-### Boolean attributes
+### 布尔属性
 
-Many attributes don't require a value to be set, like `disabled` or `checked`, so don't set them.
+许多属性不需要设置一个值，比如`disabled`或者`checked`，随意不要忘记他们(布尔值)。
 
 {% highlight html %}
 <input type="text" disabled>
@@ -43,11 +43,11 @@ Many attributes don't require a value to be set, like `disabled` or `checked`, s
 </select>
 {% endhighlight %}
 
-For more information, [read the WhatWG section](http://www.whatwg.org/specs/web-apps/current-work/multipage/common-microsyntaxes.html#boolean-attributes).
+更多的信息，[阅读WhatWG section](http://www.whatwg.org/specs/web-apps/current-work/multipage/common-microsyntaxes.html#boolean-attributes)。
 
-### Lean markup
+### 精简标签
 
-Whenever possible, avoid superfluous parent elements when writing HTML. Many times this requires iteration and refactoring, but produces less HTML. For example:
+只要可能，避免在HTML中使用过多的父元素。很多时候这要求反复检查和重构，但是产生更少的HTML。例如：
 
 {% highlight html %}
 <!-- Not so great -->
@@ -59,16 +59,17 @@ Whenever possible, avoid superfluous parent elements when writing HTML. Many tim
 <img class="avatar" src="...">
 {% endhighlight %}
 
-### Forms
+### 表单
 
-* Lean towards radio or checkbox lists instead of select menus.
-* Wrap radio and checkbox inputs and their text in `<label>`s. No need for `for` attributes here—the wrapping automatically associates the two.
-* Form buttons should always include an explicit `type`. Use primary buttons for the `type="submit"` button and regular buttons for `type="button"`.
-* The primary form button must come first in the DOM, especially for forms with multiple submit buttons. The visual order should be preserved with `float: right;` on each button.
+* 倾向于单选框或者复选框列表，而不是选择菜单。
+* 把单选框和多选输入框以及他们的文本包装在`<label>`中。这里不需要`for`属性——包装自动关联两个标签。
+* 表单按钮应该总是包含一个明显的类型`type`。为主要的按钮使用`type="submit"`按钮和普通的按钮使用`type="button"`。
+* 主要的表单按钮必须第一次展示在DOM中，特别是那些有多个确定按钮的表单。每个按钮的视觉排序应该使用`float:right;`。
 
-### Tables
+### 表格
 
-Make use of `<thead>`, `<tfoot>`, `<tbody>`, and `<th>` tags (and `scope` attribute) when appropriate. (Note: `<tfoot>` goes above `<tbody>` for speed reasons. You want the browser to load the footer before a table full of data.)
+在适当的地方使用`<thead>`,`<tfoot>`,`<tbody>`和··==`<th>`标签（和`scope`属性）。
+（注意：为了速度应该把`<tfoot>`放在`<tbody>`标签之前。你希望浏览器在在家一个完整的表格数据之前加载表格底部。）
 
 {% highlight html %}
 <table summary="This is a chart of invoices for 2011.">
@@ -93,21 +94,18 @@ Make use of `<thead>`, `<tfoot>`, `<tbody>`, and `<th>` tags (and `scope` attrib
 </table>
 {% endhighlight %}
 
-
-
 ## SCSS
 
-### Spacing
+### 空格
 
-* Use soft-tabs with a two space indent. Spaces are the only way to guarantee code renders the same in any person's environment.
-* Put spaces after `:` in property declarations.
-* Put spaces before `{` in rule declarations.
-* Put line breaks between rulesets.
-* When grouping selectors, keep individual selectors to a single line.
-* Place closing braces of declaration blocks on a new line.
-* Each declaration should appear on its own line for more accurate error reporting.
+* 使用软件标签的两个空格作为缩进。空格是保证代码在任何人的环境中都显示一致的唯一方式。
+* 属性声明时在冒号`:`后面加上空格符。
+* 规则声明时在冒号`:`后面加上空格符。
+* 当分类选择器时，保持个体选择器在同一行上。
+* 声明代码块时在新的一行上加上关闭大口号。
+* 为了更精确的错误报告，每一个声明应该出现在它自己的行内。
 
-### Formatting
+### 格式化
 
 * Use hex color codes `#000` unless using `rgba()` in raw CSS (SCSS' `rgba()` function is overloaded to accept hex colors as a param, e.g., `rgba(#000, .5)`).
 * Use `//` for comment blocks (instead of `/* */`).
@@ -118,7 +116,7 @@ Make use of `<thead>`, `<tfoot>`, `<tbody>`, and `<th>` tags (and `scope` attrib
 
 As a rule of thumb, avoid unnecessary nesting in SCSS. At most, aim for three levels. If you cannot help it, step back and rethink your overall strategy (either the specificity needed, or the layout of the nesting).
 
-### Examples
+### 例子
 
 Here are some good examples that apply the above guidelines:
 
