@@ -1,6 +1,6 @@
 ---
 layout: page
-title: States
+title: 状态
 ---
 
 States, or state indicators, inform users of the current status of a particular item. Included common states are Open, Closed, or Merged, each requiring it's own modifier class.
