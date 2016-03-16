@@ -107,18 +107,20 @@ title: 代码指南
 
 ### 格式化
 
-* Use hex color codes `#000` unless using `rgba()` in raw CSS (SCSS' `rgba()` function is overloaded to accept hex colors as a param, e.g., `rgba(#000, .5)`).
-* Use `//` for comment blocks (instead of `/* */`).
-* Avoid specifying units for zero values, e.g., `margin: 0;` instead of `margin: 0px;`.
-* Strive to limit use of shorthand declarations to instances where you must explicitly set all the available values.
+* 使用十六进制颜色代码`#000`，除非在原始的CSS中使用`rgba()`(SCSS的`rgba()`被重载为接收十六进制颜色作为一个参数的函数，例如`rgba(#000, .5)`)。
+* 在注视块使用`//`代替使用`/* */`。
+* 避免0值的单位指定，例如，使用`margin: 0;`代替`margin: 0px`。
+* 努力限制使用实例的声明，你必须明确的设置所有变量的值。
 
-### Misc
+### 混合
 
 As a rule of thumb, avoid unnecessary nesting in SCSS. At most, aim for three levels. If you cannot help it, step back and rethink your overall strategy (either the specificity needed, or the layout of the nesting).
+作为一个最重要的规则，在SCSS中避免不必要的嵌套。最多的目标是三个层次。如果这不够多，退后一步重新思考你的整体设计
+（不是特定的需求，就是嵌套的布局）。
 
 ### 例子
 
-Here are some good examples that apply the above guidelines:
+这里是一些遵循上面准则的好例子：
 
 {% highlight scss %}
 // Example of good basic formatting practices
@@ -144,13 +146,13 @@ Here are some good examples that apply the above guidelines:
 }
 {% endhighlight %}
 
-## File organization
+## 文件结构
 
-In general, a flat directory of files works best, but at GitHub we break things down by bundles (separate compiled CSS files) and sections (directories of related content).
+通常的，一个平行的文件目录是最好的，但是在GitHub上我们通过包bundles(分离编译过的CSS文件)和款式sections(关联内容的目录)来分离文件。
 
 ### Bundles
 
-GitHub.com uses a handful of bundles. Here's a simplified representation of our two desktop bundles (split to support IE9's maximum selector limit per CSS file) and a dedicated mobile bundle for our separate mobile views.
+GitHub.com使用少量的包。这里是简化后的代表我们的两个桌面包(分开来支持IE9的最大选择器并限制每个CSS文件)和一个专门供我们手机展示的手机包。
 
 {% highlight bash %}
 stylesheets
@@ -166,9 +168,10 @@ stylesheets
     └── files.scss
 {% endhighlight %}
 
-### Including (S)CSS files
+### 包含(S)CSS文件
 
-Previously we used [Sprockets](https://github.com/sstephenson/sprockets) to **require** files in Primer and at GitHub. Nowadays, we use explicit lists of **imports** to control the cascade, specificity, and more.
+前面我们再Primer和Github上使用[Sprockets](https://github.com/sstephenson/sprockets)来**引入**文件。
+现在，我们使用明确的列表**imports**来控制层叠，特性等。
 
 {% highlight scss %}
 // Imports
@@ -180,26 +183,28 @@ Previously we used [Sprockets](https://github.com/sstephenson/sprockets) to **re
 .rule { ... }
 {% endhighlight %}
 
-This is also how Primer's styles are to be included, should you need them.
+Primer样式也是这样被包含的，在你需要他们的时候。
 
-## Pixels vs. ems
+## 像素 vs. 字体尺寸
 
-Use `px` for `font-size`, because it offers absolute control over text. Additionally, unit-less `line-height` is preferred because it does not inherit a percentage value of its parent element, but instead is based on a multiplier of the `font-size`.
+在字体大小`font-size`中使用像素`px`，因为它提供对文本的绝对控制。此外，没有单位的行高`line-height`是首选因为它不继承它父元素的百分比值，
+而是基于和字体大小`font-size`的乘积。
 
-## Class naming conventions
+## 类命名约定
 
-Never reference `js-` prefixed class names from CSS files. `js-` are used exclusively from JS files.
+决不在CSS文件中使用`js-`开头的类名。`js-`仅仅是在JS文件中使用。
 
-Use the `is-` prefix for state rules that are shared between CSS and JS.
+使用`is-`开头的规则在CSS和JS中都可以使用。
 
-## Specificity (classes vs. ids)
+## 特性 (classes vs. ids)
 
-Elements that occur **exactly once** inside a page should use IDs, otherwise, use classes. When in doubt, use a class name.
+在一个页面中会出现**仅仅一次**的元素应该使用ID，否则，使用类。当有疑问的时候，使用类名。
 
-* **Good** candidates for ids: header, footer, modal popups.
-* **Bad** candidates for ids: navigation, item listings, item view pages (ex: issue view).
+* **好**的id使用场景：头部，底部，弹出框模块。
+* **坏**的id使用场景：导航，列表项，试图页面项(如：问题试图)。
 
-When styling a component, start with an element + class namespace (prefer class names over ids),  prefer direct descendant selectors by default, and use as little specificity as possible. Here is a good example:
+当设计一个组件时，开始于一个元素+类空间（选择类名而不是ID），默认的选择直接子选择器，并尽可能少的使用特性。
+这里是个好的例子：
 
 {% highlight html %}
 <ul class="category-list">
@@ -224,8 +229,9 @@ When styling a component, start with an element + class namespace (prefer class 
 }
 {% endhighlight %}
 
-### CSS Specificity guidelines
+### CSS特性规范
 
-* If you must use an id selector (`#selector`) make sure that you have no more than *one* in your rule declaration. A rule like `#header .search #quicksearch { ... }` is considered harmful.
-* When modifying an existing element for a specific use, try to use specific class names. Instead of `.listings-layout.bigger` use rules like `.listings-layout.listings-bigger`. Think about `ack/grep`ing your code in the future.
-* The class names `disabled`, `mousedown`, `danger`, `hover`, `selected`, and `active` should *always* be namespaced by a class (`button.selected` is a good example).
+* 如果你必须使用一个id选择器（`$selector`），确保在你的规则定义中你会有多余*一个*。一个像`#header .search #quicksearch{ ... }`这样的规则是被视为有害的。
+* 当修改一个存在的元素为特定用法时，尝试使用特定的类名。代替`.listings-layout.bigger`为使用规则如`.listings-layout.listings-bigger`。
+考虑在你的未来代码中方便查找`ack/grep`。
+* 类名`disabled`,`mousedown`,`dang`,`hover`,`selected`和`active`应该*总是*用来作为类的命名空间（`button.selected`是一个好例子）。
