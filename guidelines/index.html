@@ -118,19 +118,19 @@
   <li><a href="#scss" id="markdown-toc-scss">SCSS</a>    <ul>
       <li><a href="#section-6" id="markdown-toc-section-6">空格</a></li>
       <li><a href="#section-7" id="markdown-toc-section-7">格式化</a></li>
-      <li><a href="#misc" id="markdown-toc-misc">Misc</a></li>
-      <li><a href="#section-8" id="markdown-toc-section-8">例子</a></li>
+      <li><a href="#section-8" id="markdown-toc-section-8">混合</a></li>
+      <li><a href="#section-9" id="markdown-toc-section-9">例子</a></li>
     </ul>
   </li>
-  <li><a href="#file-organization" id="markdown-toc-file-organization">File organization</a>    <ul>
+  <li><a href="#section-10" id="markdown-toc-section-10">文件结构</a>    <ul>
       <li><a href="#bundles" id="markdown-toc-bundles">Bundles</a></li>
-      <li><a href="#including-scss-files" id="markdown-toc-including-scss-files">Including (S)CSS files</a></li>
+      <li><a href="#scss-1" id="markdown-toc-scss-1">包含(S)CSS文件</a></li>
     </ul>
   </li>
-  <li><a href="#pixels-vs-ems" id="markdown-toc-pixels-vs-ems">Pixels vs. ems</a></li>
-  <li><a href="#class-naming-conventions" id="markdown-toc-class-naming-conventions">Class naming conventions</a></li>
-  <li><a href="#specificity-classes-vs-ids" id="markdown-toc-specificity-classes-vs-ids">Specificity (classes vs. ids)</a>    <ul>
-      <li><a href="#css-specificity-guidelines" id="markdown-toc-css-specificity-guidelines">CSS Specificity guidelines</a></li>
+  <li><a href="#vs-" id="markdown-toc-vs-">像素 vs. 字体尺寸</a></li>
+  <li><a href="#section-11" id="markdown-toc-section-11">类命名约定</a></li>
+  <li><a href="#classes-vs-ids" id="markdown-toc-classes-vs-ids">特性 (classes vs. ids)</a>    <ul>
+      <li><a href="#css" id="markdown-toc-css">CSS特性规范</a></li>
     </ul>
   </li>
 </ul>
@@ -231,19 +231,21 @@
 <h3 id="section-7">格式化</h3>
 
 <ul>
-  <li>Use hex color codes <code class="highlighter-rouge">#000</code> unless using <code class="highlighter-rouge">rgba()</code> in raw CSS (SCSS’ <code class="highlighter-rouge">rgba()</code> function is overloaded to accept hex colors as a param, e.g., <code class="highlighter-rouge">rgba(#000, .5)</code>).</li>
-  <li>Use <code class="highlighter-rouge">//</code> for comment blocks (instead of <code class="highlighter-rouge">/* */</code>).</li>
-  <li>Avoid specifying units for zero values, e.g., <code class="highlighter-rouge">margin: 0;</code> instead of <code class="highlighter-rouge">margin: 0px;</code>.</li>
-  <li>Strive to limit use of shorthand declarations to instances where you must explicitly set all the available values.</li>
+  <li>使用十六进制颜色代码<code class="highlighter-rouge">#000</code>，除非在原始的CSS中使用<code class="highlighter-rouge">rgba()</code>(SCSS的<code class="highlighter-rouge">rgba()</code>被重载为接收十六进制颜色作为一个参数的函数，例如<code class="highlighter-rouge">rgba(#000, .5)</code>)。</li>
+  <li>在注视块使用<code class="highlighter-rouge">//</code>代替使用<code class="highlighter-rouge">/* */</code>。</li>
+  <li>避免0值的单位指定，例如，使用<code class="highlighter-rouge">margin: 0;</code>代替<code class="highlighter-rouge">margin: 0px</code>。</li>
+  <li>努力限制使用实例的声明，你必须明确的设置所有变量的值。</li>
 </ul>
 
-<h3 id="misc">Misc</h3>
+<h3 id="section-8">混合</h3>
 
-<p>As a rule of thumb, avoid unnecessary nesting in SCSS. At most, aim for three levels. If you cannot help it, step back and rethink your overall strategy (either the specificity needed, or the layout of the nesting).</p>
+<p>As a rule of thumb, avoid unnecessary nesting in SCSS. At most, aim for three levels. If you cannot help it, step back and rethink your overall strategy (either the specificity needed, or the layout of the nesting).
+作为一个最重要的规则，在SCSS中避免不必要的嵌套。最多的目标是三个层次。如果这不够多，退后一步重新思考你的整体设计
+（不是特定的需求，就是嵌套的布局）。</p>
 
-<h3 id="section-8">例子</h3>
+<h3 id="section-9">例子</h3>
 
-<p>Here are some good examples that apply the above guidelines:</p>
+<p>这里是一些遵循上面准则的好例子：</p>
 
 <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Example of good basic formatting practices
 </span><span class="nc">.styleguide-format</span> <span class="p">{</span>
@@ -267,13 +269,13 @@
   <span class="nl">margin-bottom</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
 <span class="p">}</span></code></pre></figure>
 
-<h2 id="file-organization">File organization</h2>
+<h2 id="section-10">文件结构</h2>
 
-<p>In general, a flat directory of files works best, but at GitHub we break things down by bundles (separate compiled CSS files) and sections (directories of related content).</p>
+<p>通常的，一个平行的文件目录是最好的，但是在GitHub上我们通过包bundles(分离编译过的CSS文件)和款式sections(关联内容的目录)来分离文件。</p>
 
 <h3 id="bundles">Bundles</h3>
 
-<p>GitHub.com uses a handful of bundles. Here’s a simplified representation of our two desktop bundles (split to support IE9’s maximum selector limit per CSS file) and a dedicated mobile bundle for our separate mobile views.</p>
+<p>GitHub.com使用少量的包。这里是简化后的代表我们的两个桌面包(分开来支持IE9的最大选择器并限制每个CSS文件)和一个专门供我们手机展示的手机包。</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">stylesheets
 ├── github
@@ -287,9 +289,10 @@
     ├── base.scss
     └── files.scss</code></pre></figure>
 
-<h3 id="including-scss-files">Including (S)CSS files</h3>
+<h3 id="scss-1">包含(S)CSS文件</h3>
 
-<p>Previously we used <a href="https://github.com/sstephenson/sprockets">Sprockets</a> to <strong>require</strong> files in Primer and at GitHub. Nowadays, we use explicit lists of <strong>imports</strong> to control the cascade, specificity, and more.</p>
+<p>前面我们再Primer和Github上使用<a href="https://github.com/sstephenson/sprockets">Sprockets</a>来<strong>引入</strong>文件。
+现在，我们使用明确的列表<strong>imports</strong>来控制层叠，特性等。</p>
 
 <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Imports
 </span><span class="k">@import</span> <span class="s2">"primer"</span><span class="p">;</span>
@@ -299,28 +302,30 @@
 <span class="c1">// Rules
 </span><span class="nc">.rule</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span></code></pre></figure>
 
-<p>This is also how Primer’s styles are to be included, should you need them.</p>
+<p>Primer样式也是这样被包含的，在你需要他们的时候。</p>
 
-<h2 id="pixels-vs-ems">Pixels vs. ems</h2>
+<h2 id="vs-">像素 vs. 字体尺寸</h2>
 
-<p>Use <code class="highlighter-rouge">px</code> for <code class="highlighter-rouge">font-size</code>, because it offers absolute control over text. Additionally, unit-less <code class="highlighter-rouge">line-height</code> is preferred because it does not inherit a percentage value of its parent element, but instead is based on a multiplier of the <code class="highlighter-rouge">font-size</code>.</p>
+<p>在字体大小<code class="highlighter-rouge">font-size</code>中使用像素<code class="highlighter-rouge">px</code>，因为它提供对文本的绝对控制。此外，没有单位的行高<code class="highlighter-rouge">line-height</code>是首选因为它不继承它父元素的百分比值，
+而是基于和字体大小<code class="highlighter-rouge">font-size</code>的乘积。</p>
 
-<h2 id="class-naming-conventions">Class naming conventions</h2>
+<h2 id="section-11">类命名约定</h2>
 
-<p>Never reference <code class="highlighter-rouge">js-</code> prefixed class names from CSS files. <code class="highlighter-rouge">js-</code> are used exclusively from JS files.</p>
+<p>决不在CSS文件中使用<code class="highlighter-rouge">js-</code>开头的类名。<code class="highlighter-rouge">js-</code>仅仅是在JS文件中使用。</p>
 
-<p>Use the <code class="highlighter-rouge">is-</code> prefix for state rules that are shared between CSS and JS.</p>
+<p>使用<code class="highlighter-rouge">is-</code>开头的规则在CSS和JS中都可以使用。</p>
 
-<h2 id="specificity-classes-vs-ids">Specificity (classes vs. ids)</h2>
+<h2 id="classes-vs-ids">特性 (classes vs. ids)</h2>
 
-<p>Elements that occur <strong>exactly once</strong> inside a page should use IDs, otherwise, use classes. When in doubt, use a class name.</p>
+<p>在一个页面中会出现<strong>仅仅一次</strong>的元素应该使用ID，否则，使用类。当有疑问的时候，使用类名。</p>
 
 <ul>
-  <li><strong>Good</strong> candidates for ids: header, footer, modal popups.</li>
-  <li><strong>Bad</strong> candidates for ids: navigation, item listings, item view pages (ex: issue view).</li>
+  <li><strong>好</strong>的id使用场景：头部，底部，弹出框模块。</li>
+  <li><strong>坏</strong>的id使用场景：导航，列表项，试图页面项(如：问题试图)。</li>
 </ul>
 
-<p>When styling a component, start with an element + class namespace (prefer class names over ids),  prefer direct descendant selectors by default, and use as little specificity as possible. Here is a good example:</p>
+<p>当设计一个组件时，开始于一个元素+类空间（选择类名而不是ID），默认的选择直接子选择器，并尽可能少的使用特性。
+这里是个好的例子：</p>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"category-list"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"item"</span><span class="nt">&gt;</span>Category 1<span class="nt">&lt;/li&gt;</span>
@@ -341,12 +346,13 @@
   <span class="p">}</span>
 <span class="p">}</span></code></pre></figure>
 
-<h3 id="css-specificity-guidelines">CSS Specificity guidelines</h3>
+<h3 id="css">CSS特性规范</h3>
 
 <ul>
-  <li>If you must use an id selector (<code class="highlighter-rouge">#selector</code>) make sure that you have no more than <em>one</em> in your rule declaration. A rule like <code class="highlighter-rouge">#header .search #quicksearch { ... }</code> is considered harmful.</li>
-  <li>When modifying an existing element for a specific use, try to use specific class names. Instead of <code class="highlighter-rouge">.listings-layout.bigger</code> use rules like <code class="highlighter-rouge">.listings-layout.listings-bigger</code>. Think about <code class="highlighter-rouge">ack/grep</code>ing your code in the future.</li>
-  <li>The class names <code class="highlighter-rouge">disabled</code>, <code class="highlighter-rouge">mousedown</code>, <code class="highlighter-rouge">danger</code>, <code class="highlighter-rouge">hover</code>, <code class="highlighter-rouge">selected</code>, and <code class="highlighter-rouge">active</code> should <em>always</em> be namespaced by a class (<code class="highlighter-rouge">button.selected</code> is a good example).</li>
+  <li>如果你必须使用一个id选择器（<code class="highlighter-rouge">$selector</code>），确保在你的规则定义中你会有多余<em>一个</em>。一个像<code class="highlighter-rouge">#header .search #quicksearch{ ... }</code>这样的规则是被视为有害的。</li>
+  <li>当修改一个存在的元素为特定用法时，尝试使用特定的类名。代替<code class="highlighter-rouge">.listings-layout.bigger</code>为使用规则如<code class="highlighter-rouge">.listings-layout.listings-bigger</code>。
+考虑在你的未来代码中方便查找<code class="highlighter-rouge">ack/grep</code>。</li>
+  <li>类名<code class="highlighter-rouge">disabled</code>,<code class="highlighter-rouge">mousedown</code>,<code class="highlighter-rouge">dang</code>,<code class="highlighter-rouge">hover</code>,<code class="highlighter-rouge">selected</code>和<code class="highlighter-rouge">active</code>应该<em>总是</em>用来作为类的命名空间（<code class="highlighter-rouge">button.selected</code>是一个好例子）。</li>
 </ul>
 
     </div>
