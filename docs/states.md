@@ -3,9 +3,10 @@ layout: page
 title: 状态
 ---
 
-States, or state indicators, inform users of the current status of a particular item. Included common states are Open, Closed, or Merged, each requiring it's own modifier class.
+状态，或者状态指示，用来通知用户特定项目的当前状态。常见的状态包括打开，关闭，或者合并，
+每个都需要他们自己的修饰类。
 
-### Open (green)
+### 打开 (绿色)
 
 {% example html %}
 <span class="state state-open">Open</span>
@@ -13,13 +14,13 @@ States, or state indicators, inform users of the current status of a particular 
 <span class="state state-reopened">Open</span>
 {% endexample %}
 
-### Closed (red)
+### 关闭 (红色)
 
 {% example html %}
 <span class="state state-closed">Closed</span>
 {% endexample %}
 
-### Merged (purple)
+### 合并 (紫色)
 
 {% example html %}
 <span class="state state-merged">Merged</span>

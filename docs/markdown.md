@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Markdown
+title: 标记
 ---
 
-Styles for rendering GitHub Flavored Markdown in any project.
+在任何项目中使用Github风格的标记语言样式来渲染。
 
-*Coming soon!*
+*即将来临!*
